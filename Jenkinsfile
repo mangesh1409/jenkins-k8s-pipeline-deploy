@@ -5,6 +5,8 @@ pipeline{
       steps{
         echo "hi"
         sh "date"
+        sh 'ls -l"
+        sh "pwd"
       }
     }
   }
