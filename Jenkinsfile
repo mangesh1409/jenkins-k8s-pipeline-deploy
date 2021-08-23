@@ -7,6 +7,7 @@ pipeline{
         sh "date"
         sh 'ls -l'
         sh "pwd"
+        sh "kubectl get pods --kubeconfig admin.conf"
       }
     }
   }
