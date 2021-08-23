@@ -7,7 +7,7 @@ pipeline{
         sh "date"
         sh 'ls -l'
         sh "pwd"
-        sh "kubectl apply -f deploy.yml --kubeconfig /root/admin.conf"
+        sh "kubectl apply -f deploy.yml --kubeconfig /admin.conf"
       }
     }
   }
