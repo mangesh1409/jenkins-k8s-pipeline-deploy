@@ -1,4 +1,4 @@
-pipeline{
+/*pipeline{
   agent any
   stages{
     stage("first"){
@@ -14,42 +14,43 @@ pipeline{
   
   
   
-}
+}*/
 
-
-/*pipeline {
-agent any
-  
+pipeline {
+agent any  
   parameters {
    booleanParam(name: "isDeployPod" , defaultValue: true) 
   }
+  
   stages {
-    stage('abc'){
-      when {
+    stage('abc')
+    {
+      when
+      {
         expression {
           params.isDeployPod
         }
       }
-      
-      steps {
+      steps 
+      {
         sh "kubectl  apply -f  deploy.yml  --kubeconfig  /admin.conf"
       }
     }
   }
   
-  post {
-    success {
-      
-      echo "all good"
-  }
-    
-    failure {
+  post
+  {
+    success 
+    {
+       echo "all good"
+    }
+    failure
+    {
      echo " failed ..." 
     }
-
-    always {
+    always
+    {
       echo "always ...."
     }
+ }
 }
-}
-*/
