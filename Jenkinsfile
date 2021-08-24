@@ -33,7 +33,7 @@ agent any
       }
       steps 
       {
-        sh "kubectl  apply -f  deploy.yml  --kubeconfig  /admin.conf"
+        sh "kubectl  apply -f  deploy.yml  --kubeconfig  /admin.con"
       }
     }
   }
