@@ -9,8 +9,8 @@ pipeline{
         sh 'ls -l'
         sh "pwd"
         sh "kubectl get pods --kubeconfig /admin.conf"
-        //sh "kubectl apply -f deploy.yml --kubeconfig /root/admin.conf"
-        
+        sh "kubectl apply -f deploy.yml --kubeconfig /admin.conf"
+        sh "kubectl get pods --kubeconfig /admin.conf"
       }
     }
   }
