@@ -1,4 +1,5 @@
-/*pipeline{
+
+pipeline{
   agent any
   stages{
     stage("first"){
@@ -7,16 +8,18 @@
         sh "date"
         sh 'ls -l'
         sh "pwd"
-        sh "kubectl apply -f deploy.yml --kubeconfig /admin.con"
+        //sh "kubectl apply -f deploy.yml --kubeconfig /admin.conf"
       }
     }
   }
   
   
   
-}*/
+}
 
-pipeline {
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*pipeline {
 agent any  
   parameters {
    booleanParam(name: "isDeployPod" , defaultValue: true) 
@@ -53,4 +56,4 @@ agent any
       echo "always ...."
     }
  }
-}
+}*/
